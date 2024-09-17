@@ -18,10 +18,10 @@ myHead (h:_) = h
 myLast :: [a] -> a
 myLast [] = error "MyLast: emptyList given"
 myLast [x] = x
-myLast (_:xs) = myLast(xs)
+myLast (_:xs) = myLast xs
 
 
-isPalindrome r:
+isPalindrome r
     | length r <= 1 = True
     | myHead r /= myLast r = False
     | otherwise = isPalindrome(myTail (removeLast r))
