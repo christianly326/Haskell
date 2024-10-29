@@ -9,7 +9,7 @@ myTail (_:t) = t
 removeLast :: [a] -> [a]
 removeLast [] = error "removeLast: Can't remove an emptylist"
 removeLast [_] = []
-removeLast (h:t) = h : removeLast(t)
+removeLast (h:t) = h : removeLast t
 
 myHead :: [a] -> a
 myHead [] = error "MyHead: emptyList given"
